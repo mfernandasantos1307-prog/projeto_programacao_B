@@ -25,11 +25,12 @@ Users
 
 ### 📌 Você utilizou migrations? Se sim, quantas migrations? Descreva em uma frase o que cada uma faz.
 
-Sim. Inicialmente será utilizada uma migration para criar a estrutura básica do banco de dados.
+Sim. Para manter a organização e modularidade do banco de dados, utilizei **4 migrations**, sendo cada uma responsável por criar uma tabela específica:
 
-- **InitialCreate**: cria as tabelas Users, Subjects, Topics e Tasks, incluindo suas chaves primárias e relacionamentos.
-
-Novas migrations poderão ser adicionadas posteriormente caso seja necessário alterar a estrutura do banco durante o desenvolvimento do projeto.
+* `api/src/database/migrations/001_create_users_table.ts`: cria a tabela `users` para armazenar os dados dos usuários cadastrados.
+* `api/src/database/migrations/002_create_subjects_table.ts`: cria a tabela `subjects` para armazenar as disciplinas vinculadas a cada usuário.
+* `api/src/database/migrations/003_create_topics_table.ts`: cria a tabela `topics` para gerenciar os conteúdos de estudo de cada disciplina.
+* `api/src/database/migrations/004_create_tasks_table.ts`: cria a tabela `tasks` para controlar as tarefas, avaliações e prazos das disciplinas.
 
 ---
 
